@@ -1,17 +1,19 @@
 #include "main.h"
-/**
-*print_numbers - print the numbers from 0 to 9 followed by a new line
-* _putchar - more like put char
-*Return: void
-*/
 
+/**
+ * print_numbers - prints the numbers, from 0 to 9,
+ * followed by a new line.
+ * Return: Always 0 (success)
+ */
 void print_numbers(void)
 {
-char a;
+	int i;
 
-for (a = '0'; a <= '9'; a++)
-{
-_putchar(c);
-}
-_putchar('\n');
+	i = 0;
+	while (i <= 9)
+	{
+		_putchar(i + '0');
+		i++;
+	}
+	_putchar('\n');
 }
