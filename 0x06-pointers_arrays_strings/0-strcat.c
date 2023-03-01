@@ -16,11 +16,12 @@ int dest_len = 0, i;
 while (dest[dest_len] != '\0')
 dest_len++;
 
-/* Append the source string to the destination sting */
 for (i = 0; src[i] != '\0'; i++)
 dest[dest_len + i] = src[i];
 
+/* Append the source string to the destination sting */
+dest[dest_len + i] = '\0';
+
 /*Add the terminating null byte*/
-dest[dest_len + i] = '\0'; 
-return dest;
+return (dest);
 }
