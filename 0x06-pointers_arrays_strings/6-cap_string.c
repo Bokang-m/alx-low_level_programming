@@ -1,33 +1,35 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
- * cap_string - Capitalizes all words of a string.
- * @str: The string to be capitalized.
+ * cap_string - capitalize first words in string
+ * @s: the string
  *
- * Return: The capitalized string.
+ * Return: capitalized s
  */
-char *cap_string(char *str)
-{
-int abc;
-int new_word = 1; /* flag to indicate the start of a new word */
 
-for (abc = 0; str[abc] != '\0'; abc++)
+char *cap_string(char *s)
 {
-if (new_word && isalpha(str[abc])) /* if the current character is alphabetic and it's the start of a new word */
-{
-str[abc] = toupper(str[abc]); /* capitalize it */
-new_word = 0; /* unset the flag */
-}
-else if (str[abc] == ' ' || str[abc] == '\t' || str[abc] == '\n' ||
-str[abc] == ',' || str[abc] == ';' || str[abc] == '.' ||
-str[abc] == '!' || str[abc] == '?' || str[abc] == '"' ||
-str[abc] == '(' || str[abc] == ')' || str[abc] == '{' ||
-str[abc] == '}')
-{
-new_word = 1; /* set the flag for the next word */
-}
-}
+int i = 0, j;
+char a[] = " \t\n,;.!?\"(){}";
 
-return (str);
+while (*(s + i))
+{
+if (*(s + i) >= 'a' && *(s + i) <= 'z')
+{
+if (i == 0)
+{
+*(s + i) -= 'a' - 'A';
+}
+else
+{
+for (j = 0; j <= 12; j++)
+{
+if (a[j] == *(s + i - 1))
+*(s + i) -= 'a' - 'A';
+}
+}
+}
+i++;
+}
+return (s);
 }
