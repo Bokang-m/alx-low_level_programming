@@ -11,3 +11,5 @@ int factorial(int n);
 int find_sqrt(int n, int i);
 int check_prime(int n, int i);
 int tmp_prime(int n, int i);
+int _strlen_recursion(char *s);
+int check_palindrome(char *s, int i, int j);
