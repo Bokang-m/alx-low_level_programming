@@ -8,3 +8,4 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int _putchar(char c);
 int factorial(int n);
+int find_sqrt(int n, int i);
