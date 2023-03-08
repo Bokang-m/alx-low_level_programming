@@ -9,3 +9,5 @@ int wildcmp(char *s1, char *s2);
 int _putchar(char c);
 int factorial(int n);
 int find_sqrt(int n, int i);
+int check_prime(int n, int i);
+int tmp_prime(int n, int i);
